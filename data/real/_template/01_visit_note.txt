@@ -1,0 +1,8 @@
+Title: Orthopedic clinic visit
+Type: visit_note
+Date: 2026-09-30
+Author: Orthopedics
+
+REPLACE THIS TEXT with a real, de-identified clinic note copied as written (for example an
+orthopedic consultation from the MTSamples dataset). Remove names, dates of birth, phone numbers,
+addresses, and record numbers before pasting. Keep the clinical wording exactly as it is.

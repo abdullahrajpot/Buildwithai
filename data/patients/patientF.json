@@ -1,0 +1,33 @@
+{
+  "patient": {
+    "_id": "PT-F",
+    "label": "Patient F",
+    "mrn": "MRN-40266",
+    "name_masked": "U. Ta•••",
+    "initials": "UT",
+    "age": 49,
+    "sex": "M",
+    "default_insurer": "INS-A",
+    "procedure_code": "72148",
+    "icd10_codes": ["M54.16"],
+    "provider": { "name": "A. Siddiqui, MBBS, FCPS (Neurosurgery)", "id": "PRV-2310", "facility": "Demo Panel Hospital, Islamabad" }
+  },
+  "documents": [
+    {
+      "doc_id": "F-note_01",
+      "type": "visit_note",
+      "title": "Spine clinic visit",
+      "date": "2026-08-20",
+      "author": "A. Siddiqui (Neurosurgery)",
+      "text": "Chief complaint: low back pain radiating to the left leg for 4 months.\nHistory: Pain prevents him from sitting through a full shift as a bank officer.\nExamination: Positive straight leg raise on the left at 40 degrees. Reduced left ankle reflex.\nAssessment: Lumbar radiculopathy, left side.\nPlan: Request MRI of the lumbar spine without contrast."
+    },
+    {
+      "doc_id": "F-note_02",
+      "type": "pt_note",
+      "title": "Physiotherapy discharge summary",
+      "date": "2026-07-31",
+      "author": "Physiotherapy department",
+      "text": "Completed 7 weeks of physiotherapy and core strengthening (10 Jun to 29 Jul 2026) with minimal relief.\nRadiating leg pain persists despite good adherence."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "patient": {
+    "_id": "PT-A",
+    "label": "Patient A",
+    "mrn": "MRN-40211",
+    "name_masked": "A. Kh•••",
+    "initials": "AK",
+    "age": 46,
+    "sex": "F",
+    "default_insurer": "INS-A",
+    "procedure_code": "73721",
+    "icd10_codes": ["M25.561"],
+    "provider": { "name": "S. Rehman, MBBS, FCPS (Orthopedics)", "id": "PRV-2207", "facility": "Demo Panel Hospital, Islamabad" }
+  },
+  "documents": [
+    {
+      "doc_id": "A-note_01",
+      "type": "visit_note",
+      "title": "Orthopedic clinic visit",
+      "date": "2026-09-30",
+      "author": "S. Rehman (Orthopedics)",
+      "text": "Chief complaint: chronic right knee pain for 5 months.\nHistory: Pain is worse on stairs and after prolonged walking. Pain limits stair climbing and walking more than 15 minutes. No locking or instability.\nExamination: Medial joint line tenderness and a positive McMurray test on the right. Full range of motion.\nAssessment: Chronic right knee pain, suspected medial meniscal tear.\nPlan: Request MRI of the right knee without contrast."
+    },
+    {
+      "doc_id": "A-note_02",
+      "type": "pt_note",
+      "title": "Physiotherapy discharge summary",
+      "date": "2026-09-25",
+      "author": "Physiotherapy department",
+      "text": "Referral: right knee pain.\nCompleted 8 weeks of supervised physiotherapy (28 Jul to 22 Sep 2026) with minimal relief.\nProgram included quadriceps strengthening, hamstring stretching, and gait training.\nPatient reports pain still interferes with her work as a schoolteacher."
+    },
+    {
+      "doc_id": "A-note_03",
+      "type": "imaging_report",
+      "title": "X-ray report, right knee",
+      "date": "2026-07-20",
+      "author": "Radiology department",
+      "text": "Examination: X-ray of the right knee, weight-bearing AP and lateral views, performed on 20 Jul 2026.\nFindings: Mild medial joint space narrowing. No fracture or effusion.\nImpression: Early degenerative change, right knee."
+    }
+  ]
+}

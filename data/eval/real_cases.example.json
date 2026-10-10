@@ -1,0 +1,6 @@
+{
+  "note": "Answer key for real (de-identified) cases. Fill in 'expected' BEFORE running the copilot. Criterion ids (C1, C2...) follow the section order of the policy you ingested. Status: MET | MISSING | UNCLEAR | NA (exception that does not apply). Run: npm run eval -- data/eval/real_cases.json",
+  "cases": [
+    { "id": 1, "patient_id": "PT-REAL1", "insurer": "INS-REAL", "procedure_code": "73721", "description": "Knee MRI, real consult note", "expected": { "C1": "MET", "C2": "MISSING", "C3": "MET" } }
+  ]
+}

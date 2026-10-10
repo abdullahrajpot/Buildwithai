@@ -1,0 +1,33 @@
+{
+  "patient": {
+    "_id": "PT-D",
+    "label": "Patient D",
+    "mrn": "MRN-40251",
+    "name_masked": "I. Qu•••",
+    "initials": "IQ",
+    "age": 58,
+    "sex": "M",
+    "default_insurer": "INS-A",
+    "procedure_code": "73721",
+    "icd10_codes": ["M25.561"],
+    "provider": { "name": "H. Malik, MBBS, FCPS (Orthopedics)", "id": "PRV-2231", "facility": "Demo Panel Hospital, Islamabad" }
+  },
+  "documents": [
+    {
+      "doc_id": "D-note_01",
+      "type": "visit_note",
+      "title": "Orthopedic clinic visit",
+      "date": "2026-09-29",
+      "author": "H. Malik (Orthopedics)",
+      "text": "Chief complaint: right knee pain for 7 months.\nHistory: Unable to walk more than 10 minutes without stopping. No prior imaging of the knee is on file.\nAssessment: Chronic right knee pain, suspected osteoarthritis.\nPlan: Request MRI of the right knee without contrast."
+    },
+    {
+      "doc_id": "D-note_02",
+      "type": "pt_note",
+      "title": "Physiotherapy discharge summary",
+      "date": "2026-08-28",
+      "author": "Physiotherapy department",
+      "text": "Completed 8 weeks of physiotherapy (01 Jul to 26 Aug 2026) with partial relief.\nPain persists on prolonged standing."
+    }
+  ]
+}

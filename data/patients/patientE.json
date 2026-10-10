@@ -1,0 +1,41 @@
+{
+  "patient": {
+    "_id": "PT-E",
+    "label": "Patient E",
+    "mrn": "MRN-40259",
+    "name_masked": "F. Na•••",
+    "initials": "FN",
+    "age": 34,
+    "sex": "F",
+    "default_insurer": "INS-A",
+    "procedure_code": "73721",
+    "icd10_codes": ["M25.561"],
+    "provider": { "name": "H. Malik, MBBS, FCPS (Orthopedics)", "id": "PRV-2231", "facility": "Demo Panel Hospital, Islamabad" }
+  },
+  "documents": [
+    {
+      "doc_id": "E-note_01",
+      "type": "visit_note",
+      "title": "Orthopedic clinic visit",
+      "date": "2026-10-05",
+      "author": "H. Malik (Orthopedics)",
+      "text": "Chief complaint: right knee giving way and catching for 3 weeks after a twisting injury.\nHistory: The right knee locks intermittently and she cannot fully extend it. She is unable to climb stairs at work.\nExamination: Mechanical block to full extension and a positive McMurray test.\nAssessment: Right knee pain with mechanical locking, suspected bucket-handle meniscal tear.\nPlan: Request MRI of the right knee without contrast."
+    },
+    {
+      "doc_id": "E-note_02",
+      "type": "pt_note",
+      "title": "Physiotherapy progress note",
+      "date": "2026-10-03",
+      "author": "Physiotherapy department",
+      "text": "Completed 2 weeks of physiotherapy with no improvement in the catching episodes."
+    },
+    {
+      "doc_id": "E-note_03",
+      "type": "imaging_report",
+      "title": "X-ray report, right knee",
+      "date": "2026-09-22",
+      "author": "Radiology department",
+      "text": "Examination: X-ray of the right knee performed on 22 Sep 2026.\nImpression: No fracture. Joint spaces preserved."
+    }
+  ]
+}

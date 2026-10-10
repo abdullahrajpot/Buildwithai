@@ -1,0 +1,11 @@
+{
+  "note": "Six labeled evaluation cases from the MVP spec, section 11. Status NA means an optional exception criterion that does not apply.",
+  "cases": [
+    { "id": 1, "patient_id": "PT-A", "insurer": "INS-A", "procedure_code": "73721", "description": "8 weeks PT, X-ray done", "expected": { "C1": "MET", "C2": "MET", "C3": "MET", "C4": "NA" } },
+    { "id": 2, "patient_id": "PT-B", "insurer": "INS-A", "procedure_code": "73721", "description": "4 weeks PT vs 6 required (demo case)", "expected": { "C1": "MET", "C2": "MISSING", "C3": "MET", "C4": "NA" } },
+    { "id": 3, "patient_id": "PT-B", "insurer": "INS-B", "procedure_code": "73721", "description": "Same patient, insurer needs 4 weeks (RAG effect)", "expected": { "C1": "MET", "C2": "MET", "C3": "MET", "C4": "NA" } },
+    { "id": 4, "patient_id": "PT-C", "insurer": "INS-A", "procedure_code": "73721", "description": "Vague PT documentation", "expected": { "C1": "MET", "C2": "UNCLEAR", "C3": "MET", "C4": "NA" } },
+    { "id": 5, "patient_id": "PT-D", "insurer": "INS-A", "procedure_code": "73721", "description": "No X-ray documented", "expected": { "C1": "MISSING", "C2": "MET", "C3": "MET", "C4": "NA" } },
+    { "id": 6, "patient_id": "PT-E", "insurer": "INS-A", "procedure_code": "73721", "description": "Red flag (mechanical locking)", "expected": { "C1": "MET", "C2": "MET", "C3": "MET", "C4": "MET" } }
+  ]
+}

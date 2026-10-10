@@ -1,0 +1,33 @@
+{
+  "patient": {
+    "_id": "PT-C",
+    "label": "Patient C",
+    "mrn": "MRN-40245",
+    "name_masked": "S. Mi•••",
+    "initials": "SM",
+    "age": 51,
+    "sex": "F",
+    "default_insurer": "INS-A",
+    "procedure_code": "73721",
+    "icd10_codes": ["M25.562"],
+    "provider": { "name": "S. Rehman, MBBS, FCPS (Orthopedics)", "id": "PRV-2207", "facility": "Demo Panel Hospital, Islamabad" }
+  },
+  "documents": [
+    {
+      "doc_id": "C-note_01",
+      "type": "visit_note",
+      "title": "Orthopedic clinic visit",
+      "date": "2026-09-28",
+      "author": "S. Rehman (Orthopedics)",
+      "text": "Chief complaint: left knee pain for 6 months.\nHistory: Pain makes it difficult to walk to the market and to pray on the floor. Patient reports doing some exercises at home for the knee.\nAssessment: Chronic left knee pain, possible early osteoarthritis.\nPlan: Request MRI of the left knee without contrast."
+    },
+    {
+      "doc_id": "C-note_02",
+      "type": "imaging_report",
+      "title": "X-ray report, left knee",
+      "date": "2026-08-15",
+      "author": "Radiology department",
+      "text": "Examination: X-ray of the left knee, weight-bearing views, performed on 15 Aug 2026.\nImpression: Mild degenerative change. No fracture."
+    }
+  ]
+}

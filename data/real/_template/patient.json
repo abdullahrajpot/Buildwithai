@@ -1,0 +1,13 @@
+{
+  "_id": "PT-REAL1",
+  "label": "Real case 1",
+  "mrn": "DEID-0001",
+  "name_masked": "De-identified",
+  "initials": "R1",
+  "age": 52,
+  "sex": "F",
+  "default_insurer": "INS-A",
+  "procedure_code": "73721",
+  "icd10_codes": ["M25.561"],
+  "provider": { "name": "Ordering physician (de-identified)", "id": "PRV-0001", "facility": "Your hospital" }
+}

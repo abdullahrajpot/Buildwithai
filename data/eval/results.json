@@ -1,0 +1,17 @@
+{
+  "ran_at": "2026-10-10T06:53:30.335Z",
+  "provider": "Offline rules engine",
+  "cases": 6,
+  "criteria_accuracy": {
+    "correct": 24,
+    "total": 24
+  },
+  "grounding": {
+    "verified": 57,
+    "returned": 57
+  },
+  "gap_recall": {
+    "caught": 3,
+    "total": 3
+  }
+}

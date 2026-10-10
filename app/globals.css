@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+/* Design system: "Evidence on paper" (design.md). Light theme only. */
+:root {
+  --paper: #faf8f4;
+  --surface: #ffffff;
+  --surface-sunken: #f3f0ea;
+  --line: #e6e1d8;
+  --line-strong: #d4cec2;
+  --ink: #1d1c1a;
+  --ink-2: #4a4740;
+  --ink-3: #7a766d;
+  --accent: #0f5e5b;
+  --accent-hover: #0b4a48;
+  --accent-soft: #e4efec;
+  --accent-line: #c9dfda;
+  --highlight: #fcefb0;
+  --highlight-edge: #e9c949;
+  --highlight-faint: #fdf7da;
+  --met: #2f6b48;
+  --met-bg: #eaf3ec;
+  --met-line: #cfe3d5;
+  --missing: #a3461f;
+  --missing-bg: #fbece4;
+  --missing-line: #f1d3c4;
+  --unclear: #85580a;
+  --unclear-bg: #fbf2dc;
+  --unclear-line: #eeddb2;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-sunken: var(--surface-sunken);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-line: var(--accent-line);
+  --color-highlight: var(--highlight);
+  --color-highlight-edge: var(--highlight-edge);
+  --color-highlight-faint: var(--highlight-faint);
+  --color-met: var(--met);
+  --color-met-bg: var(--met-bg);
+  --color-met-line: var(--met-line);
+  --color-missing: var(--missing);
+  --color-missing-bg: var(--missing-bg);
+  --color-missing-line: var(--missing-line);
+  --color-unclear: var(--unclear);
+  --color-unclear-bg: var(--unclear-bg);
+  --color-unclear-line: var(--unclear-line);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader Variable", Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --shadow-xs: 0 1px 2px rgba(29, 28, 26, 0.04);
+  --shadow-sm: 0 1px 2px rgba(29, 28, 26, 0.04), 0 2px 8px rgba(29, 28, 26, 0.04);
+  --shadow-paper: 0 1px 0 rgba(29, 28, 26, 0.03), 0 8px 24px -8px rgba(29, 28, 26, 0.1);
+  --shadow-pop: 0 12px 32px -8px rgba(29, 28, 26, 0.18);
+}
+
+html,
+body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 22px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--accent-soft);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(15, 94, 91, 0.18);
+  border-color: var(--accent);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Thin, quiet scrollbars for the independently scrolling workspace columns */
+.scroll-quiet {
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+
+/* Signature: the highlighter. Reserved for verified chart quotes only. */
+mark.evidence {
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+  background-color: var(--highlight-faint);
+  background-image: linear-gradient(var(--highlight), var(--highlight));
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 0% 100%;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition:
+    background-size 600ms var(--ease-out),
+    box-shadow 300ms var(--ease-out) 300ms;
+}
+
+mark.evidence[data-active="true"] {
+  background-size: 100% 100%;
+  box-shadow: inset 0 -2px 0 var(--highlight-edge);
+}
+
+/* Paper texture: 2-3% grain on a fixed, non-interactive layer (never on scrolling containers) */
+.paper-grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* Skeleton shimmer */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-sunken);
+  border-radius: var(--radius-sm);
+}
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: shimmer 1.6s infinite;
+}
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Running timeline dot: soft pulse ring */
+.pulse-ring {
+  animation: pulse-ring 1.4s var(--ease-out) infinite;
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.35;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* Insurer switch: rows whose status changed get one soft accent pulse */
+.changed-pulse {
+  animation: changed-pulse 1.2s var(--ease-out) 1;
+}
+@keyframes changed-pulse {
+  0%,
+  100% {
+    background-color: var(--surface);
+  }
+  30% {
+    background-color: var(--accent-soft);
+  }
+}
+
+/* Gap fixed: a single sage glow passes over the row */
+.met-glow {
+  animation: met-glow 700ms var(--ease-out) 1;
+}
+@keyframes met-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(47, 107, 72, 0);
+  }
+  45% {
+    box-shadow: 0 0 0 6px rgba(47, 107, 72, 0.2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

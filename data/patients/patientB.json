@@ -1,0 +1,51 @@
+{
+  "patient": {
+    "_id": "PT-B",
+    "label": "Patient B",
+    "mrn": "MRN-40238",
+    "name_masked": "B. Ra•••",
+    "initials": "BR",
+    "age": 42,
+    "sex": "M",
+    "default_insurer": "INS-A",
+    "procedure_code": "73721",
+    "icd10_codes": ["M25.561"],
+    "provider": { "name": "S. Rehman, MBBS, FCPS (Orthopedics)", "id": "PRV-2207", "facility": "Demo Panel Hospital, Islamabad" }
+  },
+  "documents": [
+    {
+      "doc_id": "B-note_01",
+      "type": "visit_note",
+      "title": "Orthopedic clinic visit",
+      "date": "2026-10-02",
+      "author": "S. Rehman (Orthopedics)",
+      "text": "Chief complaint: chronic right knee pain for 4 months after a fall while playing cricket.\nHistory: Difficulty kneeling and climbing stairs, and pain wakes him at night. No locking reported.\nExamination: Mild effusion, tenderness over the medial joint line, and a positive McMurray test.\nAssessment: Chronic right knee pain, suspected medial meniscal tear.\nPlan: Request MRI of the right knee without contrast."
+    },
+    {
+      "doc_id": "B-note_02",
+      "type": "pt_note",
+      "title": "Physiotherapy progress note",
+      "date": "2026-09-05",
+      "author": "Physiotherapy department",
+      "text": "Referral: right knee pain after sports injury.\nCompleted 4 weeks of physiotherapy with minimal relief.\nHome exercise program reviewed and continued."
+    },
+    {
+      "doc_id": "B-note_03",
+      "type": "imaging_report",
+      "title": "X-ray report, right knee",
+      "date": "2026-08-02",
+      "author": "Radiology department",
+      "text": "Examination: X-ray of the right knee on 02 Aug 2026, standing AP and lateral views.\nFindings: Joint spaces preserved. No fracture.\nImpression: Normal radiograph of the right knee."
+    }
+  ],
+  "attachable_documents": [
+    {
+      "doc_id": "B-note_04",
+      "type": "pt_note",
+      "title": "Physiotherapy discharge summary (updated)",
+      "date": "2026-10-08",
+      "author": "Physiotherapy department",
+      "text": "Physiotherapy continued after the progress note of 05 Sep 2026.\nCompleted 6 weeks of physiotherapy (05 Aug to 16 Sep 2026) with minimal relief.\nPersistent pain on stairs and kneeling despite good adherence."
+    }
+  ]
+}

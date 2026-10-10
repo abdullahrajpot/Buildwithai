@@ -1,0 +1,11 @@
+Insurer A (MOCK) - Notice of Pre-Authorization Decision
+Reference: INS-A-PA-2026-08817
+Date: 03 Sep 2026
+Patient: U. Ta••• (MRN-40266)
+Service requested: MRI lumbar spine without contrast (CPT 72148)
+Decision: Not approved
+
+Reason for decision: The submitted request does not include documentation of at least 6 weeks of conservative therapy as required by policy POL-A-MRI section 3.1. Insufficient documentation of conservative therapy.
+
+You may submit an appeal with supporting clinical documentation within 30 days of this notice.
+This is a mock letter created for a hackathon demo.
